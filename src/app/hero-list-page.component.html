@@ -1,0 +1,20 @@
+<h2>Filter/Stagger</h2>
+
+<form>
+  <input #criteria (input)="updateCriteria(criteria.value)" placeholder="Search Heroes" />
+</form>    
+
+<ul class="heroes" [@filterAnimation]="heroTotal">
+  <li *ngFor="let hero of heroes" class="hero">
+    <div class="inner">
+      <span class="badge">{{ hero.id }}</span>
+      <span>{{ hero.name }}</span>
+    </div>
+  </li>
+</ul>
+
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
